@@ -1,0 +1,27 @@
+section {
+  margin: 30px 0;
+
+  &.section-one {
+    h1 {
+      width: 333px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  &.section-two {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: 700px) {
+    &.section-one {
+      h1 {
+        width: 100%;
+      }
+    }
+
+    &.section-two {
+      padding: 10px;
+    }
+  }
+}

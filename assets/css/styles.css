@@ -1,0 +1,282 @@
+/**
+* Variables
+*/
+*,
+*:after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 60px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .fa-bars {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  header {
+    position: relative;
+  }
+  header img {
+    z-index: 999;
+  }
+  header .btn {
+    display: none;
+  }
+  header .fa-bars {
+    display: block;
+    z-index: 999;
+  }
+  header .fa-bars:hover {
+    cursor: pointer;
+  }
+}
+
+footer {
+  padding: 50px 0;
+  background: #f8f9fc;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #112340;
+  cursor: pointer;
+}
+
+nav a:nth-child(3) {
+  color: #112340;
+}
+
+nav .btn-mobile {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  nav {
+    position: absolute;
+    left: 0;
+    -webkit-transform: translateY(55%);
+            transform: translateY(55%);
+    height: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    z-index: 99;
+    padding: 0;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+  }
+  nav a {
+    margin: 20px 0;
+    display: none;
+  }
+  nav.active {
+    height: unset;
+    padding: 50px 20px;
+    border-bottom: 1px solid #112340;
+  }
+  nav.active a,
+  nav.active .btn-mobile {
+    display: block;
+  }
+}
+
+h1 {
+  font-family: "Asap", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 55px;
+  text-align: center;
+  color: "Asap", sans-serif;
+}
+
+p,
+a {
+  font-family: "Asap", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #7d8797;
+  text-align: center;
+}
+
+.btn {
+  border: 2px solid #112340;
+  border-radius: 10px;
+  padding: 15px 40px;
+  font-family: "Asap", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #112340;
+  position: relative;
+}
+
+.btn::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #41c1a6;
+  border-radius: 10px;
+  z-index: -2;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.btn:hover::before {
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+.btn-card {
+  width: 100%;
+}
+
+section {
+  margin: 30px 0;
+}
+
+section.section-one h1 {
+  width: 333px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+section.section-two {
+  margin-bottom: 100px;
+}
+
+@media (max-width: 700px) {
+  section.section-one h1 {
+    width: 100%;
+  }
+  section.section-two {
+    padding: 10px;
+  }
+}
+
+.card {
+  background: none;
+  border: 2px solid #112340;
+  border-radius: 20px;
+  padding: 40px 25px;
+  color: #112340;
+  font-family: "Asap", sans-serif;
+  font-style: normal;
+}
+
+.card .card-title {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.card .card-subtitle {
+  font-weight: 500;
+  font-size: 46px;
+  line-height: 53px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card .card-subtitle span {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card .border-bottom {
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  background: #112340;
+  margin-bottom: 30px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.card ul li {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  margin: 20px 0;
+}
+
+.card ul li svg {
+  margin-right: 10px;
+}
+
+.card::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #f6f5fb;
+  border-radius: 20px;
+  z-index: -5;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.card .btn::before {
+  background: #fff;
+}
+
+.card:nth-child(2)::before {
+  background: #ffce5d;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,32 @@
+header {
+  display: flex;
+  width: 100%;
+  padding: 60px 0;
+  align-items: center;
+  justify-content: space-between;
+
+  .fa-bars {
+    display: none;
+  }
+
+  @media (max-width: 800px) {
+    position: relative;
+
+    img {
+      z-index: 999;
+    }
+
+    .btn {
+      display: none;
+    }
+
+    .fa-bars {
+      display: block;
+      z-index: 999;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
